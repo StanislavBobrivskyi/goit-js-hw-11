@@ -63,7 +63,7 @@ async function performImageSearch() {
   }
 
   page++;
-  performImageSearch();
+  await performImageSearch();
 }
 
 window.addEventListener('scroll', handleScroll);
