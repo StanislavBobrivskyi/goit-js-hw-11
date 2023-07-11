@@ -3,7 +3,7 @@ import { clearGallery, renderPhotoCard } from '/src/renderes.js';
 
 import notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
-import '/node_modules/simplelightbox/dist/simple-lightbox.min.css';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const searchForm = document.getElementById('search-form');
 const gallery = document.querySelector('.gallery');
