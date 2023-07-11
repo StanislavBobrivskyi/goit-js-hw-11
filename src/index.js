@@ -71,10 +71,21 @@ window.addEventListener('scroll', handleScroll);
 function handleScroll() {
   const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
 
-  if (scrollTop + clientHeight >= scrollHeight - 200) {
+  if (scrollTop + clientHeight >= scrollHeight - 300) {
     window.removeEventListener('scroll', handleScroll);
     performImageSearch().then(() => {
       window.addEventListener('scroll', handleScroll);
     });
   }
 }
+
+// function handleScroll() {
+//   const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+
+//   if (scrollTop + clientHeight >= scrollHeight - 200) {
+//     window.removeEventListener('scroll', handleScroll);
+//     performImageSearch().then(() => {
+//       window.addEventListener('scroll', handleScroll);
+//     });
+//   }
+// }
