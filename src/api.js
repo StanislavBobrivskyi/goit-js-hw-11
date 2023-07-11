@@ -1,5 +1,5 @@
 import axios from 'axios';
-const apiKey = '38122384-f449367556dc0438355b2be02'; // Замініть на свій унікальний ключ доступу до API сервісу Pixabay
+const apiKey = '38122384-f449367556dc0438355b2be02';
 
 export async function searchImages(searchQuery, page) {
   const url = `https://pixabay.com/api/?key=${apiKey}&q=${searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=40`;
