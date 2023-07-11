@@ -30,20 +30,6 @@ async function handleFormSubmit(event) {
   createLightbox();
 }
 
-function createLightbox() {
-  if (lightbox) {
-    lightbox.refresh();
-    return;
-  }
-
-  lightbox = new SimpleLightbox('.gallery a', {
-    captions: true,
-    captionsData: 'alt',
-    captionPosition: 'bottom',
-    captionDelay: 250,
-  });
-}
-
 async function performImageSearch() {
   const { data, error } = await searchImages(searchQuery, page);
 
@@ -64,6 +50,20 @@ async function performImageSearch() {
 
   page++;
   await performImageSearch();
+}
+
+function createLightbox() {
+  if (lightbox) {
+    lightbox.refresh();
+    return;
+  }
+
+  lightbox = new SimpleLightbox('.gallery a', {
+    captions: true,
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
+  });
 }
 
 window.addEventListener('scroll', handleScroll);
